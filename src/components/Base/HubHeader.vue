@@ -15,14 +15,17 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link f-br" aria-current="page" href="#">ホーム</a>
+            <a class="nav-link f-gray" aria-current="page" href="#">TOP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link f-br" href="#">ユーザー管理</a>
+            <a class="nav-link f-gray" href="#">Exhibit Manage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link f-gray" href="#">History</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle f-br" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              設定
+            <a class="nav-link dropdown-toggle f-gray" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Settings
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li><a class="dropdown-item" href="#">プロファイル</a></li>
@@ -31,6 +34,16 @@
             </ul>
           </li>
         </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 serch" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn serch-botton" type="submit">
+            <span class="material-symbols-outlined">
+              search
+            </span>
+          </button>
+        </form>
+
         <!-- ログアウトリンク -->
         <span class="navbar-text">
           <a class="nav-link" href="#">ログアウト</a>
@@ -47,7 +60,39 @@ export default {
 </script>
 
 <style scoped>
-.f-br {
-  color: black;
+.f-gray {
+  color: #5F5D6A;
+  font-weight: bold;
+}
+
+.navbar {
+  box-shadow: 0 4px 6px #F0E7EC;
+  background: #fff;
+}
+
+.nav-item {
+  padding-right: 30px;
+}
+
+.f-gray:hover {
+  color: #D7A0B0;
+}
+
+.f-gray:active {
+  color: #D7A0B0;
+}
+
+.serch {
+  border-radius: 20px;
+  border: #F6EEF3 solid 2.5px;
+}
+
+.serch-botton {
+  color: #F1BCCE;
+  padding: 5px 0 0 0;
+}
+
+.serch-botton:hover {
+  color: #DAA1B6;
 }
 </style>
