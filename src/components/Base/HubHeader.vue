@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <!-- ロゴとサイト名 -->
       <a class="navbar-brand" href="/">
-        <img src="@/assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-top">
+        <img src="@/assets/wolf.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
       </a>
 
       <!-- ナビゲーションバーのトグルボタン（小画面で表示） -->
@@ -36,8 +36,11 @@
         </ul>
 
         <form class="d-flex" role="search">
-          <input class="form-control me-2 serch" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn serch-botton" type="submit">
+          <div class="search-box">
+            <span class="material-symbols-outlined search-icon">favorite</span>
+            <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
+          </div>
+          <button class="btn a-botton" type="submit">
             <span class="material-symbols-outlined">
               search
             </span>
@@ -67,32 +70,58 @@ export default {
 
 .navbar {
   box-shadow: 0 4px 6px #F0E7EC;
-  background: #fff;
+  background: linear-gradient(to right, #fff, #FAF5F9);
 }
 
 .nav-item {
   padding-right: 30px;
 }
 
-.f-gray:hover {
+.f-gray:hover, .f-gray:active, .f-gray:focus {
   color: #D7A0B0;
 }
 
-.f-gray:active {
-  color: #D7A0B0;
-}
-
-.serch {
+.search {
+  padding-left: 35px;
   border-radius: 20px;
   border: #F6EEF3 solid 2.5px;
 }
 
-.serch-botton {
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #F7C4CC; /* アイコンの色を指定 */
+}
+
+.search {
+  padding-left: 35px; /* アイコンのスペースを確保 */
+}
+
+.search-botton {
   color: #F1BCCE;
   padding: 5px 0 0 0;
 }
 
-.serch-botton:hover {
+.search-botton:hover {
   color: #DAA1B6;
+}
+
+.search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F7C4CC; /* ピンク色 */
+  opacity: 1; /* プレースホルダーの透明度をフルに */
+}
+
+.search:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #F7C4CC;
+}
+
+.sarch::-ms-input-placeholder { /* Microsoft Edge */
+  color: #F7C4CC;
 }
 </style>
