@@ -1,19 +1,14 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-white">
     <div class="container-fluid">
-      <!-- ロゴとサイト名 -->
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/" @click.prevent="emitToggleSideBar">
         <img src="@/assets/wolf.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
       </a>
-
-      <!-- ナビゲーションバーのトグルボタン（小画面で表示） -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- ナビゲーションリンク -->
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav me-auto head-item">
           <li class="nav-item">
             <a class="nav-link f-gray" aria-current="page" href="#">TOP</a>
           </li>
@@ -34,7 +29,6 @@
             </ul>
           </li>
         </ul>
-
         <form class="d-flex" role="search">
           <div class="search-box">
             <span class="material-symbols-outlined search-icon">favorite</span>
@@ -46,8 +40,6 @@
             </span>
           </button>
         </form>
-
-        <!-- ログアウトリンク -->
         <span class="navbar-text">
           <a class="nav-link" href="#">ログアウト</a>
         </span>
@@ -56,10 +48,15 @@
   </nav>
 </template>
 
-<script>
-export default {
-  name: 'HubHeader'
-};
+<script setup>
+import { defineEmits } from 'vue';
+
+const emit = defineEmits(['toggle-sidebar']);
+
+const emitToggleSideBar = (event) => {
+  event.preventDefault();
+  emit('toggle-sidebar');
+}
 </script>
 
 <style scoped>
@@ -75,6 +72,10 @@ export default {
 
 .nav-item {
   padding-right: 30px;
+}
+
+.head-item {
+  padding-left: 130px;
 }
 
 .f-gray:hover, .f-gray:active, .f-gray:focus {

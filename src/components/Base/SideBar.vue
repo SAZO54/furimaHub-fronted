@@ -1,11 +1,5 @@
 <template>
   <div>
-    <!-- ハンバーガーメニューボタン -->
-    <button class="btn btn-primary" type="button" @click="toggleSidebar">
-      ☰
-    </button>
-
-    <!-- サイドバー -->
     <div :class="['sidebar', { 'active': isOpen }]">
       <div class="pt-3">
         <h5 class="text-white text-center">サイドバー</h5>
@@ -28,29 +22,23 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  methods: {
-    toggleSidebar() {
-      this.isOpen = !this.isOpen;
-    }
-  }
-};
-</script>
+<script setup>
+  import { defineProps } from 'vue';
+  
+  defineProps({
+    isOpen: Boolean
+  });
+  </script>
 
 <style scoped>
 .sidebar {
-  width: 250px;
+  width: 200px;
   position: fixed;
-  left: -250px;
+  left: -200px;
   height: 100%;
-  background: #343a40;
+  background: #B3BCCC;
   transition: left 0.3s;
+  box-shadow: 0 4px 6px #A9B1C5;
 }
 
 .sidebar.active {
