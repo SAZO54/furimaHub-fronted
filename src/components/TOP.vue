@@ -1,28 +1,19 @@
-<template>
-  <div class="card component-card">
-    <div class="card-body">
-      <div class="card-top-icons">
-        <i class="bi bi-cloud"></i>
-        <i class="bi bi-heart" :class="{'active': isFavorited}"></i>
-      </div>
-      <div class="progress-circle">
-        <!-- 円形のプログレスバーをここに実装する必要があります。 -->
-        <!-- Bootstrapはデフォルトで円形のプログレスバーを提供していないので、カスタムCSSかライブラリが必要です。 -->
-      </div>
-      <div class="card-text">Earnings</div>
-    </div>
-  </div>
-</template>
-
 <script setup>
-  // import { ref } from 'vue';
-  
-  // const isFavorited = ref(false);
-  
-  // function toggleFavorite() {
-  //   isFavorited.value = !isFavorited.value;
-  // }
-  </script>
+import CardItem from './Base/CardItem.vue';
+    // import { ref } from 'vue';
+    
+    // const isFavorited = ref(false);
+    
+    // function toggleFavorite() {
+    //   isFavorited.value = !isFavorited.value;
+    // }
+</script>
+
+<template>
+  <CardItem title="Total Items"/>
+  <CardItem title="Earnings"/>
+  <CardItem title="Transacted"/>
+</template>
 
 <style scoped>
   .card {
@@ -30,7 +21,7 @@
     height: 200px;
     margin-left: 20px;
     margin-top: 25px;
-    box-shadow:0 0 2px 0 #B0B0BC;
+    box-shadow: 0 4px 6px #EBE2E7;
   }
 
   .card-text {
