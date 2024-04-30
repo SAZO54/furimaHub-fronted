@@ -35,7 +35,7 @@ const props = defineProps({
   height: 200px;
   margin-left: 20px;
   margin-top: 25px;
-  box-shadow: 0 4px 6px #EBE2E7;
+  box-shadow: 0 4px 12px #EBE2E7;
 }
 
 .card-text {
