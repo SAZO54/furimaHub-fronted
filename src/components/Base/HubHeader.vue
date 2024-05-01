@@ -1,3 +1,14 @@
+<script setup>
+import { defineEmits } from 'vue';
+
+const emit = defineEmits(['toggle-sidebar']);
+
+const emitToggleSideBar = (event) => {
+  event.preventDefault();
+  emit('toggle-sidebar');
+}
+</script>
+
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-white">
     <div class="container-fluid">
@@ -47,17 +58,6 @@
     </div>
   </nav>
 </template>
-
-<script setup>
-import { defineEmits } from 'vue';
-
-const emit = defineEmits(['toggle-sidebar']);
-
-const emitToggleSideBar = (event) => {
-  event.preventDefault();
-  emit('toggle-sidebar');
-}
-</script>
 
 <style scoped>
 .f-gray {

@@ -1,3 +1,11 @@
+<script setup>
+  import { defineProps } from 'vue';
+  
+  defineProps({
+    isOpen: Boolean
+  });
+</script>
+
 <template>
   <div>
     <div :class="['sidebar', { 'active': isOpen }]">
@@ -21,14 +29,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-  import { defineProps } from 'vue';
-  
-  defineProps({
-    isOpen: Boolean
-  });
-  </script>
 
 <style scoped>
 .sidebar {

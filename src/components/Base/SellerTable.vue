@@ -1,10 +1,5 @@
 <script setup>
   // import { ref } from 'vue';
-import { defineProps } from 'vue';
-
-const props = defineProps({
-  title: String
-});
   
   // const isFavorited = ref(false);
   
@@ -16,6 +11,7 @@ const props = defineProps({
 <template>
   <div class="card component-card">
     <div class="card-body">
+      <div class="card-text">Avarage Sellers</div>
       <div class="card-top-icons">
         <i class="bi bi-cloud"></i>
         <i class="bi bi-heart" :class="{'active': isFavorited}"></i>
@@ -24,40 +20,56 @@ const props = defineProps({
         <!-- 円形のプログレスバーをここに実装する必要があります。 -->
         <!-- Bootstrapはデフォルトで円形のプログレスバーを提供していないので、カスタムCSSかライブラリが必要です。 -->
       </div>
-      <div class="card-text">{{ props.title }}</div>
+      <button type="button" class="btn btn-pink">Confirm Details</button>
     </div>
   </div>
 </template>
 
 <style scoped>
 .card {
-  width: 250px;
-  height: 250px;
-  margin-left: 20px;
-  margin-top: 25px;
-  margin-right: 40px;
-  box-shadow: 0 4px 12px #EBE2E7;
+  width: 1200px;
+  height: 550px;
+  margin-left: 40px;
+  margin-top: 50px;
+  box-shadow: 0 4px 12px #A0A3B4;
   position: relative;
 }
 
 .card-text {
-  color: #4D4A5C;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center
+  color: #FAFCFD;
+  font-size: 25px;
+  text-align: left;
+  margin: 20px;
 }
 
 .component-card {
-  background: linear-gradient(to bottom, #F8EFF4, #F4E8EC);
+  background-color: #B2B8C6;
   border-radius: 20px;
   color: #D06179;
-  border: #FEF9FA;
+  border: #B2B8C6;
 }
 
 .bi-heart.active {
   color: #E83E8C;
+}
+
+.btn-pink {
+  background-color: #ECB1C4;
+  border: #ECB1C4;
+  color: #FAFCFD;
+  width: 180px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px #7D7D8F;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0 20px;
+}
+
+.btn-pink:hover, .btn-pink:active, .btn-pink:focus {
+  background-color: #EDA3B8;
+  border: #EDA3B8;
+  color: #FAFCFD;
 }
 
 /* アイコンとプログレスサークルを配置するための追加スタイル */
