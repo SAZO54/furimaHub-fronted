@@ -1,7 +1,7 @@
 <script setup>
 import CardItem from './Base/CardItem.vue';
 import SellerTable from './Base/SellerTable.vue';
-
+import SideBar from './Base/SideBar.vue';
 // const isFavorited = ref(false);
 
 // function toggleFavorite() {
@@ -10,7 +10,10 @@ import SellerTable from './Base/SellerTable.vue';
 </script>
 
 <template>
-  <SellerTable />
+  <div style="display: flex;">
+    <SideBar />
+    <SellerTable />
+  </div>
   <div class="card-all">
     <CardItem title="Total Items (総出品数)"/>
     <CardItem title="Transacted (取引済み)"/>

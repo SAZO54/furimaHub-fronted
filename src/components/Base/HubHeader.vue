@@ -1,25 +1,18 @@
 <script setup>
-import { defineEmits } from 'vue';
-
-const emit = defineEmits(['toggle-sidebar']);
-
-const emitToggleSideBar = (event) => {
-  event.preventDefault();
-  emit('toggle-sidebar');
-}
 </script>
 
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-white">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/" @click.prevent="emitToggleSideBar">
+      <a class="navbar-brand" href="/">
         <img src="@/assets/wolf.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <h3 class="ftitle">FurimaHub</h3>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav me-auto head-item">
+        <!-- <ul class="navbar-nav me-auto head-item">
           <li class="nav-item">
             <a class="nav-link f-gray" aria-current="page" href="#">TOP</a>
           </li>
@@ -39,7 +32,7 @@ const emitToggleSideBar = (event) => {
               <li><a class="dropdown-item" href="#">セキュリティ</a></li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
         <form class="d-flex" role="search">
           <div class="search-box">
             <span class="material-symbols-outlined search-icon">favorite</span>
@@ -65,9 +58,15 @@ const emitToggleSideBar = (event) => {
   font-weight: bold;
 }
 
+.ftitle {
+  color: #D588A0;
+  margin-left: 15px;
+}
+
 .navbar {
   box-shadow: 0 4px 6px #F0E7EC;
   background: linear-gradient(to right, #fff, #FAF5F9);
+  height: 72px;
 }
 
 .nav-item {
@@ -82,10 +81,15 @@ const emitToggleSideBar = (event) => {
   color: #D7A0B0;
 }
 
+.d-flex {
+  margin:0 0 0 auto
+}
+
 .search {
   padding-left: 35px;
   border-radius: 20px;
   border: #F6EEF3 solid 2.5px;
+  width: 310px;
 }
 
 .search-box {
@@ -124,5 +128,15 @@ const emitToggleSideBar = (event) => {
 
 .sarch::-ms-input-placeholder { /* Microsoft Edge */
   color: #F7C4CC;
+}
+
+.btn {
+  padding-left: 0;
+  margin-top: 5px;
+  color: #E99CB6;
+}
+
+.btn:active, .btn:hover, .btn:focus {
+  color: #C3758E;
 }
 </style>
