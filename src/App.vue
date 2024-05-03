@@ -1,20 +1,11 @@
 <template>
-  <HubHeader @toggle-sidebar="toggleSidebar" />
-  <SideBar :is-open="isSidebarOpen"  />
+  <HubHeader />
   <TOP />
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import TOP from './components/TOP.vue';
 import HubHeader from './components/Base/HubHeader.vue';
-import SideBar from './components/Base/SideBar.vue';
-
-const isSidebarOpen = ref(false);
-
-function toggleSidebar() {
-  isSidebarOpen.value = !isSidebarOpen.value;
-}
 </script>
 
 <style>
