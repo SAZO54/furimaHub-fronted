@@ -44,9 +44,6 @@
             </span>
           </button>
         </form>
-        <span class="navbar-text">
-          <a class="nav-link" href="#">ログアウト</a>
-        </span>
       </div>
     </div>
   </nav>
@@ -63,6 +60,7 @@
   margin-left: 15px;
   font-size: 2.5rem;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 .navbar {

@@ -31,26 +31,26 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  width: 250px;
-  height: 250px;
-  margin-left: 20px;
-  margin-top: 25px;
-  margin-right: 40px;
+  width: 220px;
+  height: 160px;
+  margin: 25px 15px 0 25px;
   box-shadow: 0 4px 12px #EBE2E7;
   position: relative;
 }
 
 .card-text {
-  color: #4D4A5C;
+  color: #7D798D;
   position: absolute;
   bottom: 10px;
   left: 50%;
+  right: -40%;
   transform: translateX(-50%);
-  text-align: center
+  text-align: center;
+  font-weight: bold;
 }
 
 .component-card {
-  background: linear-gradient(to bottom, #F8EFF4, #F4E8EC);
+  background: linear-gradient(to bottom, #ffdcea, #f4d7df4f);
   border-radius: 20px;
   color: #D06179;
   border: #FEF9FA;
@@ -60,5 +60,4 @@ const props = defineProps({
   color: #E83E8C;
 }
 
-/* アイコンとプログレスサークルを配置するための追加スタイル */
 </style>
