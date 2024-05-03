@@ -61,12 +61,15 @@
 .ftitle {
   color: #D588A0;
   margin-left: 15px;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .navbar {
   box-shadow: 0 4px 6px #F0E7EC;
   background: linear-gradient(to right, #fff, #FAF5F9);
   height: 72px;
+  margin-bottom: 0;
 }
 
 .nav-item {

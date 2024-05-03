@@ -44,9 +44,9 @@
 }
 
 .nav-item {
-  font-size: 19px;
+  font-size: 21px;
   text-align: left;
-  padding: 12px;
+  padding: 8px;
   display: flex;
   align-items: center;
 }
