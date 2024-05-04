@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useRoute } from 'vue-router';
 
 const isDropdownOpen = ref(false);
 
@@ -7,6 +8,15 @@ function accountStatus() {
   isDropdownOpen.value = !isDropdownOpen.value;
   console.log(isDropdownOpen.value);
 }
+
+/**
+ * page
+ */
+const route = useRoute();
+
+const isActive = (path) => computed(() => route.path === path);
+
+
 </script>
 
 <template>
@@ -18,43 +28,49 @@ function accountStatus() {
             <div class="icon-circle white-circle">
               <span class="material-symbols-outlined pink-icon">home</span>
             </div>
-            <a class="nav-link" href="/">Dashboard</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/dashboard').value }" href="/dashboard">Dashboard</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle pink-circle">
               <span class="material-symbols-outlined white-icon">kid_star</span>
             </div>
-            <a class="nav-link active" href="/exhibit-details">Exhibit Manage</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/exhibit-details').value }" href="/exhibit-details">Exhibit Manage</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle white-circle">
               <span class="material-symbols-outlined pink-icon">history</span>
             </div>
-            <a class="nav-link" href="/history">History</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/history').value }" href="/history">History</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle pink-circle">
               <span class="material-symbols-outlined white-icon">deceased</span>
             </div>
-            <a class="nav-link" href="/ship-status">Shipping Status</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/ship-status').value }" href="/ship-status">Shipping Status</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle white-circle"> 
               <span class="material-symbols-outlined pink-icon">settings_heart</span>
             </div>
-            <a class="nav-link" href="/setting">Setting</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/setting').value }" href="/setting">Setting</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle pink-circle">
               <span class="material-symbols-outlined white-icon">savings</span>
             </div>
-            <a class="nav-link" href="/money">Money Manage</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/money').value }" href="/money">Money Manage</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle white-circle"> 
               <span class="material-symbols-outlined pink-icon">monitoring</span>
             </div>
-            <a class="nav-link" href="/analysis">Analysis</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/analysis').value }" href="/analysis">Analysis</a>
+          </li>
+          <li class="nav-item">
+            <div class="icon-circle pink-circle"> 
+              <span class="material-symbols-outlined white-icon">mark_unread_chat_alt</span>
+            </div>
+            <a class="nav-link" :class="{ 'active-link': isActive('/messages').value }" href="/messages">Messages</a>
           </li>
         </ul>
       </div>
@@ -143,6 +159,10 @@ function accountStatus() {
 }
 
 .nav-link:hover, .nav-link:active, .nav-link:focus {
+  color: #E8A2B8;
+}
+
+.active-link {
   color: #E8A2B8;
 }
 

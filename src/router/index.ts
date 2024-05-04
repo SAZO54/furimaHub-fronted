@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import TOP from '@/components/TOP.vue'
+import HubDashboard from '@/components/HubDashboard.vue'
 import TransactionHistory from '@/components/TransactionHistory.vue'
 import HubSetting from '@/components/HubSetting.vue'
 import TransactionMessage from '@/components/TransactionMessage.vue'
@@ -11,9 +11,9 @@ import HubLogOut from '@/components/HubLogout.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'TOP',
-    component: TOP
+    path: '/dashboard',
+    name: 'HubDashboard',
+    component: HubDashboard
   },
   {
     path: '/history',

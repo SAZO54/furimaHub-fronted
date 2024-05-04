@@ -2,7 +2,8 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-  CardTitle: String
+  cardTitle: String,
+  sellerAnalysis: Function,
 });
 
   // import { ref } from 'vue';
@@ -17,8 +18,8 @@ const props = defineProps({
 <template>
   <div class="card component-card">
     <div class="card-body">
-      <div class="card-text">{{ props.CardTitle }}</div>
-      <button type="button" class="btn btn-pink">
+      <div class="card-text">{{ props.cardTitle }}</div>
+      <button type="button" class="btn btn-pink" @click="props.sellerAnalysis">
         <div class="check">check</div>
         <span class="material-symbols-outlined">monitoring</span>
       </button>

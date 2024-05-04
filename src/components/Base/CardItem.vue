@@ -3,7 +3,8 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-  title: String
+  title: String,
+  cardTransition: String
 });
   
   // const isFavorited = ref(false);
@@ -17,7 +18,7 @@ const props = defineProps({
   <div class="card component-card">
     <div class="card-body">
       <div class="card-top-icons">
-        <a class="dropdown-item" href="#">
+        <a class="dropdown-item" :href="props.cardTransition">
           <span class="material-symbols-outlined">heart_plus</span>
         </a>
       </div>

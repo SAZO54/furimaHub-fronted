@@ -1,18 +1,22 @@
 <script setup>
-  // import { ref } from 'vue';
-  
-  // const isFavorited = ref(false);
-  
-  // function toggleFavorite() {
-  //   isFavorited.value = !isFavorited.value;
-  // }
+import { useRouter } from 'vue-router';
+
+/**
+ * pageTransition
+ */
+const router = useRouter();
+
+function exhibitDetailTransition() {
+  router.push('/exhibit-details');
+}
+
 </script>
 
 <template>
   <div class="card component-card">
     <div class="card-text">Exhibit Status</div>
     <div class="card-body">
-      <button type="button" class="btn btn-pink">Confirm Details</button>
+      <button type="button" class="btn btn-pink" @click="exhibitDetailTransition">Confirm Details</button>
     </div>
   </div>
 </template>
