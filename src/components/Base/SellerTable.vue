@@ -1,4 +1,11 @@
 <script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  cardTitle: String,
+  sellerAnalysis: Function,
+});
+
   // import { ref } from 'vue';
   
   // const isFavorited = ref(false);
@@ -11,40 +18,48 @@
 <template>
   <div class="card component-card">
     <div class="card-body">
-      <div class="card-text">Avarage Sellers</div>
-      <div class="card-top-icons">
-        <i class="bi bi-cloud"></i>
-        <i class="bi bi-heart" :class="{'active': isFavorited}"></i>
-      </div>
-      <div class="progress-circle">
-        <!-- 円形のプログレスバーをここに実装する必要があります。 -->
-        <!-- Bootstrapはデフォルトで円形のプログレスバーを提供していないので、カスタムCSSかライブラリが必要です。 -->
-      </div>
-      <button type="button" class="btn btn-pink">Confirm Details</button>
+      <div class="card-text">{{ props.cardTitle }}</div>
+      <button type="button" class="btn btn-pink" @click="props.sellerAnalysis">
+        <div class="check">check</div>
+        <span class="material-symbols-outlined">monitoring</span>
+      </button>
     </div>
   </div>
 </template>
 
 <style scoped>
 .card {
-  width: 1200px;
-  height: 550px;
-  margin-left: 40px;
+  width: 400px;
+  height: 260px;
+  margin-left: 35px;
   margin-top: 50px;
-  box-shadow: 0 4px 12px #A0A3B4;
+  box-shadow: 0 4px 12px #7D7D8F;
   position: relative;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .card-text {
-  color: #FAFCFD;
+  color: #b7a5ac;
   font-size: 25px;
   text-align: left;
-  margin: 20px;
+  padding: 4px 0 0 4px;
+}
+
+.check {
+  font-size: 16px;
+  margin-right: 4px;
+  margin-top: 3px;
 }
 
 .component-card {
-  background-color: #B2B8C6;
-  border-radius: 20px;
+  background-color: #c3cada75;
+  border-radius: 10px;
   color: #D06179;
   border: #B2B8C6;
 }
@@ -57,13 +72,12 @@
   background-color: #ECB1C4;
   border: #ECB1C4;
   color: #FAFCFD;
-  width: 180px;
-  border-radius: 20px;
-  box-shadow: 0 2px 10px #7D7D8F;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0 20px;
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #b18fa6;
+  font-size: 14px;
+  display: flex;
 }
 
 .btn-pink:hover, .btn-pink:active, .btn-pink:focus {
@@ -72,5 +86,4 @@
   color: #FAFCFD;
 }
 
-/* アイコンとプログレスサークルを配置するための追加スタイル */
 </style>

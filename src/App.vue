@@ -1,11 +1,15 @@
 <template>
   <HubHeader />
-  <TOP />
+  <div style="display: flex;">
+    <SideBar />
+    <router-view />
+  </div>
 </template>
 
 <script setup>
-import TOP from './components/TOP.vue';
 import HubHeader from './components/Base/HubHeader.vue';
+import SideBar from './components/Base/SideBar.vue';
+
 </script>
 
 <style>
