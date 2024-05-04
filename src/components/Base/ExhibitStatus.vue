@@ -16,6 +16,72 @@ function exhibitDetailTransition() {
   <div class="card component-card">
     <div class="card-text">Exhibit Status</div>
     <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Product</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Total</th>
+                <th scope="col">Date</th>
+                <th scope="col"></th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">17371705</th>
+              <td>Volt Premium Bootstrap 5 Dashboard</td>
+              <td>johndoe@gmail.com</td>
+              <td>€61.11</td>
+              <td>Aug 31 2020</td>
+              <td><span class="material-symbols-outlined btn-detail">arrow_circle_right</span></td>
+            </tr>
+            <tr>
+              <th scope="row">17370540</th>
+              <td>Pixel Pro Premium Bootstrap UI Kit</td>
+              <td>jacob.monroe@company.com</td>
+              <td>$153.11</td>
+              <td>Aug 28 2020</td>
+              <td><span class="material-symbols-outlined btn-detail">arrow_circle_right</span></td>
+            </tr>
+            <tr>
+              <th scope="row">17371705</th>
+              <td>Volt Premium Bootstrap 5 Dashboard</td>
+              <td>johndoe@gmail.com</td>
+              <td>€61.11</td>
+              <td>Aug 31 2020</td>
+              <td><span class="material-symbols-outlined btn-detail">arrow_circle_right</span></td>
+            </tr>
+            <tr>
+              <th scope="row">17370540</th>
+              <td>Pixel Pro Premium Bootstrap UI Kit</td>
+              <td>jacob.monroe@company.com</td>
+              <td>$153.11</td>
+              <td>Aug 28 2020</td>
+              <td><span class="material-symbols-outlined btn-detail">arrow_circle_right</span></td>
+            </tr>
+            <tr>
+              <th scope="row">17371705</th>
+              <td>Volt Premium Bootstrap 5 Dashboard</td>
+              <td>johndoe@gmail.com</td>
+              <td>€61.11</td>
+              <td>Aug 31 2020</td>
+              <td><span class="material-symbols-outlined btn-detail">arrow_circle_right</span></td>
+            </tr>
+            <tr>
+              <th scope="row">17370540</th>
+              <td>Pixel Pro Premium Bootstrap UI Kit</td>
+              <td>jacob.monroe@company.com</td>
+              <td>$153.11</td>
+              <td>Aug 28 2020</td>
+              <td><span class="material-symbols-outlined btn-detail">arrow_circle_right</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card-body">
       <button type="button" class="btn btn-pink" @click="exhibitDetailTransition">Confirm Details</button>
     </div>
   </div>
@@ -70,7 +136,13 @@ function exhibitDetailTransition() {
 .btn-pink:hover, .btn-pink:active, .btn-pink:focus {
   background-color: #EDA3B8;
   border: #EDA3B8;
-  color: #FAFCFD;
 }
 
+.btn-detail {
+  color: #f78aa9;
+}
+
+.btn-detail:hover, .btn-detail:active, .btn-detail:focus {
+  color: #f777a0;
+}
 </style>
