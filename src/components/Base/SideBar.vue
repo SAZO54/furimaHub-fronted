@@ -18,31 +18,43 @@ function accountStatus() {
             <div class="icon-circle white-circle">
               <span class="material-symbols-outlined pink-icon">home</span>
             </div>
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="/">Dashboard</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle pink-circle">
               <span class="material-symbols-outlined white-icon">kid_star</span>
             </div>
-            <a class="nav-link active" href="#">Exhibit Manage</a>
+            <a class="nav-link active" href="/exhibit-details">Exhibit Manage</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle white-circle">
               <span class="material-symbols-outlined pink-icon">history</span>
             </div>
-            <a class="nav-link" href="#">History</a>
+            <a class="nav-link" href="/history">History</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle pink-circle">
               <span class="material-symbols-outlined white-icon">deceased</span>
             </div>
-            <a class="nav-link" href="#">Shipping Status</a>
+            <a class="nav-link" href="/ship-status">Shipping Status</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle white-circle"> 
               <span class="material-symbols-outlined pink-icon">settings_heart</span>
             </div>
-            <a class="nav-link" href="#">Setting</a>
+            <a class="nav-link" href="/setting">Setting</a>
+          </li>
+          <li class="nav-item">
+            <div class="icon-circle pink-circle">
+              <span class="material-symbols-outlined white-icon">savings</span>
+            </div>
+            <a class="nav-link" href="/money">Money Manage</a>
+          </li>
+          <li class="nav-item">
+            <div class="icon-circle white-circle"> 
+              <span class="material-symbols-outlined pink-icon">monitoring</span>
+            </div>
+            <a class="nav-link" href="/analysis">Analysis</a>
           </li>
         </ul>
       </div>
@@ -53,13 +65,13 @@ function accountStatus() {
           </button>
           <ul class="dropdown-menu" v-if="isDropdownOpen" :class="{ 'show-menu': isDropdownOpen }">
             <li>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/setting">
                 <span class="material-symbols-outlined" style="margin-right: 8px">settings_heart</span>
-                <div>Settings</div>
+                <div>Setting</div>
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/message">
                 <span class="material-symbols-outlined" style="margin-right: 8px">mark_unread_chat_alt</span>
                 <div>Messages</div>
               </a>

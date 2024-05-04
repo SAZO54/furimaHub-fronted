@@ -6,6 +6,7 @@
 <script setup>
 import TOP from './components/TOP.vue';
 import HubHeader from './components/Base/HubHeader.vue';
+
 </script>
 
 <style>

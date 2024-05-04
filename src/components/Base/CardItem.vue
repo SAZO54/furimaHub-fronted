@@ -17,12 +17,9 @@ const props = defineProps({
   <div class="card component-card">
     <div class="card-body">
       <div class="card-top-icons">
-        <i class="bi bi-cloud"></i>
-        <i class="bi bi-heart" :class="{'active': isFavorited}"></i>
-      </div>
-      <div class="progress-circle">
-        <!-- 円形のプログレスバーをここに実装する必要があります。 -->
-        <!-- Bootstrapはデフォルトで円形のプログレスバーを提供していないので、カスタムCSSかライブラリが必要です。 -->
+        <a class="dropdown-item" href="#">
+          <span class="material-symbols-outlined">heart_plus</span>
+        </a>
       </div>
       <div class="card-text">{{ props.title }}</div>
     </div>
@@ -30,6 +27,14 @@ const props = defineProps({
 </template>
 
 <style scoped>
+.dropdown-item {
+  text-align: right;
+}
+
+.dropdown-item:hover, .dropdown-item:focus, .dropdown-item:active {
+  color: #c0455f;
+}
+
 .card {
   width: 220px;
   height: 160px;

@@ -1,4 +1,38 @@
 <script setup>
+// import { useRouter } from 'vue-router';
+
+// /**
+//  * pageTransition
+//  */
+// const router = useRouter();
+
+// function hisoryTransition() {
+//   router.push('/hisory');
+// }
+
+// function settingTransition() {
+//   router.push('/setting');
+// }
+
+// function messageTransition() {
+//   router.push('/message');
+// }
+
+// function moneyTransition() {
+//   router.push('/money');
+// }
+
+// function exhibitDetailTransition() {
+//   router.push('/exhibit-details');
+// }
+
+// function shipTransition() {
+//   router.push('/ship-status');
+// }
+
+// function analysisTransition() {
+//   router.push('/analysis');
+// }
 </script>
 
 <template>
@@ -12,27 +46,6 @@
       </button>
       <h3 class="ftitle">FurimaHub</h3>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <!-- <ul class="navbar-nav me-auto head-item">
-          <li class="nav-item">
-            <a class="nav-link f-gray" aria-current="page" href="#">TOP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link f-gray" href="#">Exhibit Manage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link f-gray" href="#">History</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle f-gray" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Settings
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">プロファイル</a></li>
-              <li><a class="dropdown-item" href="#">アカウント</a></li>
-              <li><a class="dropdown-item" href="#">セキュリティ</a></li>
-            </ul>
-          </li>
-        </ul> -->
         <form class="d-flex" role="search">
           <div class="search-box">
             <span class="material-symbols-outlined search-icon">favorite</span>
