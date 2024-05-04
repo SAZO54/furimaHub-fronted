@@ -71,13 +71,13 @@ function accountStatus() {
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="/message">
+              <a class="dropdown-item" href="/messages">
                 <span class="material-symbols-outlined" style="margin-right: 8px">mark_unread_chat_alt</span>
                 <div>Messages</div>
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/logout">
                 <span class="material-symbols-outlined" style="margin-right: 8px">logout</span>
                 <div>Sign out</div>
               </a>

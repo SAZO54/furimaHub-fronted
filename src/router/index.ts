@@ -7,6 +7,7 @@ import MoneyManage from '@/components/MoneyManage.vue'
 import ExhibitDetail from '@/components/ExhibitDetail.vue'
 import ShipStatus from '@/components/ShipStatus.vue'
 import TransactionAnalysis from '@/components/TransactionAnalysis.vue'
+import HubLogOut from '@/components/HubLogout.vue'
 
 const routes = [
   {
@@ -25,7 +26,7 @@ const routes = [
     component: HubSetting
   },
   {
-    path: '/message',
+    path: '/messages',
     name: 'TransactionMessage',
     component: TransactionMessage
   },
@@ -48,7 +49,12 @@ const routes = [
     path: '/analysis',
     name: 'TransactionAnalysis',
     component: TransactionAnalysis
-  }
+  },
+  {
+    path: '/logout',
+    name: 'HubLogOut',
+    component: HubLogOut
+  },
 ]
 
 const router = createRouter({
