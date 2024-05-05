@@ -5,6 +5,7 @@ import HubSetting from '@/components/HubSetting.vue'
 import TransactionMessage from '@/components/TransactionMessage.vue'
 import MoneyManage from '@/components/MoneyManage.vue'
 import ExhibitList from '@/components/ExhibitList.vue'
+import ExhibitDetail from '@/components/ExhibitDetail.vue'
 import ShipStatus from '@/components/ShipStatus.vue'
 import TransactionAnalysis from '@/components/TransactionAnalysis.vue'
 import HubLogOut from '@/components/HubLogout.vue'
@@ -39,6 +40,11 @@ const routes = [
     path: '/exhibit',
     name: 'ExhibitList',
     component: ExhibitList
+  },
+  {
+    path: '/exhibit/detail',
+    name: 'ExhibitDetail',
+    component: ExhibitDetail
   },
   {
     path: '/ship-status',

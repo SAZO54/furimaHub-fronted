@@ -1,6 +1,13 @@
 <script setup>
-  const productName = 'Product Name';
-  const productPrice = '4,500';
+import { useRouter } from 'vue-router';
+const productName = 'Product Name';
+const productPrice = '4,500';
+
+const router = useRouter();
+
+function detailsTransition(id) {
+  router.push(`/exhibit/detail?id=${id}`);
+}
 </script>
 
 <template>
@@ -13,7 +20,7 @@
           <div class="product-price">¥ {{ productPrice }}</div>
         </div>
         <div class="icon-container">
-          <button type="button" class="btn btn-pink">
+          <button type="button" class="btn btn-pink" @click="detailsTransition(index)">
             <div class="check">Show Detail</div>
             <span class="material-symbols-outlined">open_in_full</span>
           </button>
