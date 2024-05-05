@@ -34,7 +34,7 @@ const isActive = (path) => computed(() => route.path === path);
             <div class="icon-circle pink-circle">
               <span class="material-symbols-outlined white-icon">kid_star</span>
             </div>
-            <a class="nav-link" :class="{ 'active-link': isActive('/exhibit-details').value }" href="/exhibit-details">Exhibit Manage</a>
+            <a class="nav-link" :class="{ 'active-link': isActive('/exhibit').value }" href="/exhibit">Exhibit Manage</a>
           </li>
           <li class="nav-item">
             <div class="icon-circle white-circle">
@@ -108,12 +108,12 @@ const isActive = (path) => computed(() => route.path === path);
 <style scoped>
 .sidebar {
   width: 300px;
-  height: 92vh;
+  height: 100%;
   left: 0;
   top: 0;
   background-color: #b3b9ca5c;
   transition: left 0.3s;
-  box-shadow: 0 4px 6px #A9B1C5;
+  box-shadow: 4px 0 6px -1px #A9B1C5;
   position: relative;
 }
 

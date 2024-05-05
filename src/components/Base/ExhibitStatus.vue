@@ -7,7 +7,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 function exhibitDetailTransition() {
-  router.push('/exhibit-details');
+  router.push('/exhibit');
 }
 
 </script>
@@ -82,7 +82,7 @@ function exhibitDetailTransition() {
       </div>
     </div>
     <div class="card-body">
-      <button type="button" class="btn btn-pink" @click="exhibitDetailTransition">Confirm Details</button>
+      <button type="button" class="btn btn-pink" @click="exhibitDetailTransition">Confirm All Exhibit</button>
     </div>
   </div>
 </template>

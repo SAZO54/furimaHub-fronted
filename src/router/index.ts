@@ -4,7 +4,7 @@ import TransactionHistory from '@/components/TransactionHistory.vue'
 import HubSetting from '@/components/HubSetting.vue'
 import TransactionMessage from '@/components/TransactionMessage.vue'
 import MoneyManage from '@/components/MoneyManage.vue'
-import ExhibitDetail from '@/components/ExhibitDetail.vue'
+import ExhibitList from '@/components/ExhibitList.vue'
 import ShipStatus from '@/components/ShipStatus.vue'
 import TransactionAnalysis from '@/components/TransactionAnalysis.vue'
 import HubLogOut from '@/components/HubLogout.vue'
@@ -36,9 +36,9 @@ const routes = [
     component: MoneyManage
   },
   {
-    path: '/exhibit-details',
-    name: 'ExhibitDetail',
-    component: ExhibitDetail
+    path: '/exhibit',
+    name: 'ExhibitList',
+    component: ExhibitList
   },
   {
     path: '/ship-status',

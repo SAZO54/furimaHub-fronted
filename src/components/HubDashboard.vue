@@ -43,6 +43,7 @@ function analysisTransition() {
 .card-all {
   margin-left: 20px;
   margin-top: 20px;
+  margin-bottom: 34px;
   display: flex;
 }
 </style>
