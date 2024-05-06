@@ -58,13 +58,13 @@ console.log("worldActive", worldActive.value);
 
 .btn {
   width: 80px;
-  height: 40px;
   border-radius: 3px;
   font-size: 19px;
 }
 
 .btn-pink {
   background-color: #ECB1C4;
+  height: 45px;
   border: #ECB1C4;
   color: #FAFCFD;
 }
@@ -77,8 +77,10 @@ console.log("worldActive", worldActive.value);
 
 .disabled-btn, .disabled-btn:hover {
   background-color: #e1d1d6;
+  height: 40px;
   border: #e1d1d6;
   color: #8f8f8f;
+  box-shadow: 0 5px 0 #8f8f8fa1;
 }
 
 .jp-btn {
