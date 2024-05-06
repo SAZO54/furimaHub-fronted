@@ -90,7 +90,7 @@ console.log("worldActive", worldActive.value);
 .map-container {
   background-color: #fff1fc7a;
   width: 900px;
-  height: 679px;
+  height: 674px;
   margin-top: 20px;
 }
 
