@@ -1,9 +1,301 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+/**
+ * pageTransition
+ */
+const router = useRouter();
+
+function backExhibitList() {
+  router.push('/exhibit');
+}
+
+// function editExhibit() {
+  // idを保持して編集画面に遷移する処理
+// }
+
 </script>
 
 <template>
-  <p>This is 商品一括管理 page.</p>
+  <div class="detail-ctn">
+    <div style="display: flex;">
+      <span class="material-symbols-outlined back-btn" @click="backExhibitList">undo</span>
+      <button type="button" class="btn btn-pink edit-btn">
+        <div class="edit">Edit</div>
+        <span class="material-symbols-outlined" style="font-size: 22px !important">arrow_outward</span>
+      </button>
+    </div>
+    <div class="card component-card">
+      <div class="card-text">Detail</div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <label for="inputItemName" class="form-label">Item Name</label>
+            <input type="text" class="form-control" id="inputItemName" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="inputDisplayName" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="inputDisplayName">
+          </div>
+          <div class="mb-3">
+            <label for="inputItemDesciption" class="form-label">Item Description</label>
+            <textarea class="form-control" id="inputItemDesciption" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="inputQuantityStock" class="form-label label-30">Quantity in stock</label>
+            <input type="number" class="form-control form-30" id="inputQuantityStock" min="0" step="1">
+          </div>
+          <div class="mb-3">
+            <label for="inputItemTag" class="form-label">Item Tag</label>
+            <input type="text" class="form-control" id="inputItemTag">
+          </div>
+          <div>
+            <div class="form-label exhibit-info">Exhibit Infomation</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Exhibited at merukari
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Exhibited at eBay
+              </label>
+            </div>
+            <div>
+              <div class="mb-3">
+                <label for="inputexhibit1" class="form-label">Exhibit 1</label>
+                <input type="text" class="form-control" id="inputexhibit1">
+              </div>
+              <div class="mb-3">
+                <label for="inputexhibit2" class="form-label label-30">Exhibit 2</label>
+                <input type="text" class="form-control form-30" id="inputexhibit2">
+              </div>
+            </div>
+          </div> 
+          <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+.header, .detail-ctn {
+  margin: 40px 40px 20px;
+}
+
+.back-btn {
+  font-size: 40px;
+  margin-top: 0 !important;
+  margin-right: 10px;
+  margin-left: 0 !important;
+  color: #D588A0;
+  cursor: pointer;
+}
+
+.edit-btn {
+  height: 40px !important;
+  font-size: 18px !important;
+  background-color: #ffb0ca !important;
+}
+
+.edit {
+  padding-left: 15px;
+  padding-top: 2px;
+}
+
+.edit-btn:focus, .edit-btn:active, .edit-btn:hover {
+  background-color: #e59bb3 !important;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 40px 40px 40px;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-body {
+  padding: 38px 10px 10px;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+}
+
+.product-price {
+  color: #7D798D;
+  font-weight: bold;
+  text-align: right;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.material-symbols-outlined {
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+.btn-pink {
+  background-color: #ECB1C4;
+  border: #ECB1C4;
+  color: #FAFCFD;
+  width: 110px;
+  height: 32px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #b18fa6;
+  font-size: 14px;
+  display: flex;
+}
+
+.btn-pink:hover, .btn-pink:active, .btn-pink:focus {
+  background-color: #EDA3B8;
+  border: #EDA3B8;
+  color: #FAFCFD;
+}
+
+.submit-btn {
+  background-color: #ff93b6 !important;
+  height: 45px;
+  border: #ff93b6;
+  color: #FAFCFD !important;
+}
+
+.submit-btn:hover, .submit-btn:active, .submit-btn:focus {
+  background-color: #e97a9e !important;
+  border: #e97a9e;
+}
+
+.btn {
+  width: 100px;
+  border-radius: 3px;
+  font-size: 19px;
+}
+
+.disabled-btn, .disabled-btn:hover, .disabled-btn:active, .disabled-btn:focus {
+  background-color: #e1d1d6;
+  height: 40px;
+  border: #e1d1d6;
+  color: #8f8f8f;
+  box-shadow: 0 5px 0 #8f8f8fa1;
+  padding-top: 7px;
+}
+
+.do-btn {
+  margin-left: 5px;
+}
+
+.map-container {
+  background-color: #fff1fc7a;
+  width: 900px;
+  height: 674px;
+  margin-top: 20px;
+}
+
+.world-img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.card {
+  width: 1523px;
+  height: 100%;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px #A0A3B4;
+  position: relative;
+}
+
+.card-text {
+  background-color: #FAF3F6;
+  border-radius: 10px 10px 0 0;
+  border-bottom: #B2B8C6;
+  color:	#bf8f9f;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left;
+  padding: 20px 15px 15px 20px;
+}
+
+.component-card {
+  border-radius: 10px;
+  color: #D06179;
+  border: #B2B8C6;
+}
+
+.bi-heart.active {
+  color: #E83E8C;
+}
+
+.btn-detail {
+  color: #f78aa9;
+}
+
+.btn-detail:hover, .btn-detail:active, .btn-detail:focus {
+  color: #f777a0;
+}
+
+.mb-3 {
+  display: flex;
+  margin-bottom: 38px !important;
+  line-height: 38px;
+}
+
+.form-label {
+  width: 200px;
+  color: #786569;
+  font-size: large;
+  margin-bottom: 0 !important;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.label-30 {
+  width: 175px;
+}
+
+.exhibit-info {
+  padding-top: 5px !important;
+  margin-bottom: 30px !important;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.form-control {
+  margin-right: 30px;
+}
+
+.form-30 {
+  width: 30%;
+}
+
+.form-check {
+  margin-left: 20px;
+  margin-bottom: 38px !important;
+  font-size: large;
+  text-align: left;
+  color: #786569;
+}
+
+.form-check-input:checked {
+    background-color: #ecb1c4;
+    border-color: #ecb1c4;
+}
 </style>

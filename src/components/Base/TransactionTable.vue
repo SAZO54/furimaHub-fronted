@@ -63,7 +63,6 @@
               <td>Aug 28 2020</td>
               <td><span class="material-symbols-outlined btn-detail">arrow_circle_right</span></td>
             </tr>
-            <!-- Additional rows... -->
           </tbody>
         </table>
       </div>

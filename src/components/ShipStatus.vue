@@ -76,11 +76,12 @@ console.log("worldActive", worldActive.value);
 }
 
 .disabled-btn, .disabled-btn:hover {
-  background-color: #e1d1d6;
+  background-color: #e1d1d694;
   height: 40px;
   border: #e1d1d6;
   color: #8f8f8f;
   box-shadow: 0 5px 0 #8f8f8fa1;
+  padding-top: 7px;
 }
 
 .jp-btn {
