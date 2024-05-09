@@ -42,7 +42,8 @@ function backExhibitList() {
             <textarea class="form-control" id="inputItemDesciption" rows="3"></textarea>
           </div>
           <div class="mb-3">
-            <label for="inputQuantityStock" class="form-label label-30">Quantity in stock</label>
+            <label for="inputQuantityStock" class="form-label wid-175
+            ">Quantity in stock</label>
             <input type="number" class="form-control form-30" id="inputQuantityStock" min="0" step="1">
           </div>
           <div class="mb-3">
@@ -63,16 +64,42 @@ function backExhibitList() {
                 Exhibited at eBay
               </label>
             </div>
+            <!-- merukari用 -->
             <div>
-              <div class="mb-3">
-                <label for="inputexhibit1" class="form-label">Exhibit 1</label>
-                <input type="text" class="form-control" id="inputexhibit1">
-              </div>
-              <div class="mb-3">
-                <label for="inputexhibit2" class="form-label label-30">Exhibit 2</label>
-                <input type="text" class="form-control form-30" id="inputexhibit2">
+              <div class="form-label exhibit-info">merukari</div>
+              <div class="mb-3 ex-ctn">
+                <label class="form-label wid-175">Exhibit 1</label>
+                <div class="mb-3">
+                  <label for="inputExhibitId1" class="form-label ex-label">ID</label>
+                  <input type="text" class="form-control ex-form" id="inputExhibitId1">
+                </div>
+                <div class="mb-3">
+                  <label for="inputExhibitPrice1" class="form-label ex-label">Price</label>
+                  <input type="text" class="form-control ex-form" id="inputExhibitPrice1">
+                </div>
               </div>
             </div>
+            <!-- eBay用 -->
+            <div>
+              <div class="form-label exhibit-info">eBay</div>
+              <div class="mb-3 ex-ctn">
+                <label class="form-label wid-175">Exhibit 1</label>
+                <div class="mb-3">
+                  <label for="inputExhibitId1" class="form-label ex-label">ID</label>
+                  <input type="text" class="form-control ex-form" id="inputExhibitId1">
+                </div>
+                <div class="mb-3">
+                  <label for="inputExhibitPrice1" class="form-label ex-label" style="width: 59px;">Price</label>
+                  <input type="text" class="form-control ex-form ebay-form" id="inputExhibitPrice1">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Type</option>
+                    <option value="1">$</option>
+                    <option value="2">¥</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
           </div> 
           <button type="submit" class="btn btn-primary submit-btn">Submit</button>
         </form>
@@ -267,8 +294,28 @@ function backExhibitList() {
   text-align: left;
 }
 
-.label-30 {
+.wid-175
+ {
   width: 175px;
+}
+
+.ex-label {
+  padding-left: 0 !important;
+  width: 80px;
+}
+
+.ex-form {
+  width: 80%;
+  margin-right: 100px !important;
+}
+
+.ex-ctn {
+  margin-bottom: 0 !important;
+}
+
+.ebay-form {
+  margin-right: 30px !important;
+  width: 242px !important;
 }
 
 .exhibit-info {
@@ -284,6 +331,11 @@ function backExhibitList() {
 
 .form-30 {
   width: 30%;
+}
+
+.form-select {
+  height: 38px;
+  width: 200px;
 }
 
 .form-check {
