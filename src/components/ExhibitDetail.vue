@@ -29,6 +29,14 @@ function backExhibitList() {
       <div class="card-text">Detail</div>
       <div class="card-body">
         <form>
+          <div class="d-flex justify-content-center align-items-center img-ctn">
+            <div class="text-center">
+              <div style="line-height: 38px;">
+                <span class="material-symbols-outlined imgmode">imagesmode</span>
+              </div>
+              <div style="color: #ccc;">Upload Images</div>
+            </div>
+          </div>
           <div class="mb-3">
             <label for="inputItemName" class="form-label">Item Name</label>
             <input type="text" class="form-control" id="inputItemName" aria-describedby="emailHelp">
@@ -225,21 +233,21 @@ function backExhibitList() {
   padding-top: 7px;
 }
 
-.do-btn {
-  margin-left: 5px;
+.img-ctn {
+  height: 300px;
+  width: 40%;
+  border-radius: 20px;
+  border: 1px dashed #ccc;
+  margin: 0 auto 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.map-container {
-  background-color: #fff1fc7a;
-  width: 900px;
-  height: 674px;
-  margin-top: 20px;
-}
-
-.world-img {
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
+.imgmode {
+  font-size: 80px;
+  color: #ccc; 
+  margin: 0 !important;
 }
 
 .card {
