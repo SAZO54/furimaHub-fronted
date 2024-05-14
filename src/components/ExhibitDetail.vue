@@ -37,6 +37,39 @@ function backExhibitList() {
               <div style="color: #ccc;">Upload Images</div>
             </div>
           </div>
+          <div class="image-collage">
+            <div class="image-container">
+              <div class="upload-placeholder">
+                <span class="material-symbols-outlined">upload</span>
+                <p>Upload image</p>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="upload-placeholder">
+                <span class="material-symbols-outlined">upload</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="upload-placeholder">
+                <span class="material-symbols-outlined">upload</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="upload-placeholder">
+                <span class="material-symbols-outlined">upload</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="upload-placeholder">
+                <span class="material-symbols-outlined">upload</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="upload-placeholder">
+                <span class="material-symbols-outlined">upload</span>
+              </div>
+            </div>
+          </div>
           <div class="mb-3">
             <label for="inputItemName" class="form-label">Item Name</label>
             <input type="text" class="form-control" id="inputItemName" aria-describedby="emailHelp">
@@ -117,6 +150,52 @@ function backExhibitList() {
 </template>
 
 <style scoped>
+/* test用 */
+.image-collage {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 38px;
+}
+
+.collage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #ccc;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  color: #aaa;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-placeholder:hover {
+  background-color: #eee;
+}
+
+.material-symbols-outlined {
+  font-size: 3rem;
+}
+/*  */
+
 .header, .detail-ctn {
   margin: 40px 40px 20px;
 }
