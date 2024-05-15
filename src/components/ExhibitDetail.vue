@@ -40,33 +40,33 @@ function backExhibitList() {
           <div class="image-collage">
             <div class="image-container">
               <div class="upload-placeholder">
-                <span class="material-symbols-outlined">upload</span>
+                <span class="material-symbols-outlined">add_circle</span>
                 <p>Upload image</p>
               </div>
             </div>
             <div class="image-container">
               <div class="upload-placeholder">
-                <span class="material-symbols-outlined">upload</span>
+                <span class="material-symbols-outlined">emoji_nature</span>
               </div>
             </div>
             <div class="image-container">
               <div class="upload-placeholder">
-                <span class="material-symbols-outlined">upload</span>
+                <span class="material-symbols-outlined">emoji_nature</span>
               </div>
             </div>
             <div class="image-container">
               <div class="upload-placeholder">
-                <span class="material-symbols-outlined">upload</span>
+                <span class="material-symbols-outlined">emoji_nature</span>
               </div>
             </div>
             <div class="image-container">
               <div class="upload-placeholder">
-                <span class="material-symbols-outlined">upload</span>
+                <span class="material-symbols-outlined">emoji_nature</span>
               </div>
             </div>
             <div class="image-container">
               <div class="upload-placeholder">
-                <span class="material-symbols-outlined">upload</span>
+                <span class="material-symbols-outlined">emoji_nature</span>
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ function backExhibitList() {
   position: relative;
   width: 200px;
   height: 200px;
-  margin-bottom: 38px;
+  margin-bottom: 60px;
 }
 
 .collage-image {

@@ -12,6 +12,10 @@ import HubLogOut from '@/components/HubLogout.vue'
 
 const routes = [
   {
+    path: '/',
+    redirect: '/dashboard'
+  },
+  {
     path: '/dashboard',
     name: 'HubDashboard',
     component: HubDashboard
