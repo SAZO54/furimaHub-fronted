@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { ref, watch, defineEmits } from 'vue';
+import { ref, onMounted, defineEmits } from 'vue';
 
 const files = ref([]);
 const uploadModal = ref(null);
@@ -40,12 +40,12 @@ const fileInput = ref(null);
 
 const emits = defineEmits(['show', 'hide']);
 
-watch(uploadModal, (newVal) => {
-  if (newVal) {
-    modal = new bootstrap.Modal(newVal);
-  }
+let modal;
+onMounted(() => {
+  modal = new bootstrap.Modal(uploadModal.value);
 });
 
+/* eslint-disable */
 function showModal() {
   emits('show');
   if (modal) {
