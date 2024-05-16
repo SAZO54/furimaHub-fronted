@@ -1,4 +1,6 @@
 <script setup>
+import UploadModal from './Base/UploadModal.vue';
+import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 /**
@@ -13,6 +15,23 @@ function backExhibitList() {
 // function editExhibit() {
   // idを保持して編集画面に遷移する処理
 // }
+
+/**
+ * upload images modal
+ */
+const uploadModal = ref(null);
+
+function openUploadModal() {
+  uploadModal.value.showModal();
+}
+
+function handleShow() {
+  console.log('Upload modal is shown');
+}
+
+function handleHide() {
+  console.log('Upload modal is hidden');
+}
 
 </script>
 
@@ -29,7 +48,7 @@ function backExhibitList() {
       <div class="card-text">Detail</div>
       <div class="card-body">
         <form>
-          <div class="d-flex justify-content-center align-items-center img-ctn">
+          <div class="d-flex justify-content-center align-items-center img-ctn" @click="openUploadModal">
             <div class="text-center">
               <div style="line-height: 38px;">
                 <span class="material-symbols-outlined imgmode">imagesmode</span>
@@ -146,6 +165,7 @@ function backExhibitList() {
         </form>
       </div>
     </div>
+    <UploadModal ref="uploadModal" @show="handleShow" @hide="handleHide" />
   </div>
 </template>
 
