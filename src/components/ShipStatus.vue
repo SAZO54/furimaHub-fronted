@@ -26,7 +26,7 @@ console.log("worldActive", worldActive.value);
     <div>
       <div class="ship-container" v-if="worldActive">
         <div class="flex">
-          <button class="btn btn-pink" @click="mapTabSwitch">world</button>
+          <button class="btn btn-pink disabled" @click="mapTabSwitch">world</button>
           <button class="btn disabled-btn jp-btn" @click="mapTabSwitch">japan</button>
         </div> 
         <div class="map-container" v-if="worldActive">
@@ -36,7 +36,7 @@ console.log("worldActive", worldActive.value);
       <div class="ship-container" v-else>
         <div class="flex">
           <button class="btn disabled-btn" @click="mapTabSwitch">world</button>
-          <button class="btn btn-pink jp-btn" @click="mapTabSwitch">japan</button>
+          <button class="btn btn-pink jp-btn disabled" @click="mapTabSwitch">japan</button>
         </div> 
         <div class="map-container">
           <img src="@/assets/japan.png" alt="Japan Image" class="japan-img"/>
@@ -63,10 +63,10 @@ console.log("worldActive", worldActive.value);
 }
 
 .btn-pink {
-  background-color: #ECB1C4;
+  background-color: #ECB1C4 !important;
   height: 45px;
   border: #ECB1C4;
-  color: #FAFCFD;
+  color: #FAFCFD !important;
 }
 
 .btn-pink:hover {
@@ -76,11 +76,12 @@ console.log("worldActive", worldActive.value);
 }
 
 .disabled-btn, .disabled-btn:hover {
-  background-color: #e1d1d6;
+  background-color: #e1d1d694;
   height: 40px;
   border: #e1d1d6;
   color: #8f8f8f;
   box-shadow: 0 5px 0 #8f8f8fa1;
+  padding-top: 7px;
 }
 
 .jp-btn {
